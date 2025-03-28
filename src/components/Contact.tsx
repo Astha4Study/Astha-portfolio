@@ -12,7 +12,7 @@ const Contact = () => {
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const { toast } = useToast();
-  
+
   const { ref: sectionRef, inView } = useInView({
     triggerOnce: true,
     threshold: 0.1,
@@ -26,7 +26,7 @@ const Contact = () => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-    
+
     // Simulate form submission
     setTimeout(() => {
       setIsSubmitting(false);
@@ -35,7 +35,7 @@ const Contact = () => {
         email: "",
         message: "",
       });
-      
+
       toast({
         title: "Message sent!",
         description: "Thank you for reaching out. I'll get back to you soon.",
@@ -45,7 +45,7 @@ const Contact = () => {
 
   return (
     <section id="contact" className="py-20 md:py-28 bg-secondary/50">
-      <div 
+      <div
         ref={sectionRef}
         className="section-container"
       >
@@ -58,12 +58,12 @@ const Contact = () => {
               Get in Touch
             </div>
             <h2 className="section-title">
-              Let's work together
+              Let's Build Something Great Together
             </h2>
             <p className="text-muted-foreground text-lg max-w-lg mb-8">
-              Have a project in mind or want to discuss potential opportunities? Feel free to reach out through the form or via the contact details below.
+              Have an idea or a project you'd like to bring to life? Let's connect and explore how we can collaborate to create something amazing. Reach out via the form or contact details below.
             </p>
-            
+
             <div className="space-y-6">
               <div className="flex items-start space-x-4">
                 <div className="mt-1 p-2 rounded-full bg-primary/10 text-primary">
@@ -83,10 +83,10 @@ const Contact = () => {
                 </div>
                 <div>
                   <h3 className="font-medium">Phone</h3>
-                  <p className="text-muted-foreground">+1 (555) 123-4567</p>
+                  <p className="text-muted-foreground">+62 8134 4916 095</p>
                 </div>
               </div>
-              
+
               <div className="flex items-start space-x-4">
                 <div className="mt-1 p-2 rounded-full bg-primary/10 text-primary">
                   <svg
@@ -106,10 +106,10 @@ const Contact = () => {
                 </div>
                 <div>
                   <h3 className="font-medium">Email</h3>
-                  <p className="text-muted-foreground">hello@astha.design</p>
+                  <p className="text-muted-foreground">iyandabes1@gmail.com</p>
                 </div>
               </div>
-              
+
               <div className="flex items-start space-x-4">
                 <div className="mt-1 p-2 rounded-full bg-primary/10 text-primary">
                   <svg
@@ -129,12 +129,12 @@ const Contact = () => {
                 </div>
                 <div>
                   <h3 className="font-medium">Location</h3>
-                  <p className="text-muted-foreground">San Francisco, CA</p>
+                  <p className="text-muted-foreground">Banyumas, Purwokerto</p>
                 </div>
               </div>
             </div>
           </div>
-          
+
           <div className={cn(
             "flex-1 w-full transition-all duration-700 delay-300",
             inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
@@ -156,7 +156,7 @@ const Contact = () => {
                     placeholder="Your name"
                   />
                 </div>
-                
+
                 <div>
                   <label htmlFor="email" className="block text-sm font-medium mb-1">
                     Email
@@ -172,7 +172,7 @@ const Contact = () => {
                     placeholder="your.email@example.com"
                   />
                 </div>
-                
+
                 <div>
                   <label htmlFor="message" className="block text-sm font-medium mb-1">
                     Message
@@ -188,7 +188,7 @@ const Contact = () => {
                     placeholder="Tell me about your project..."
                   />
                 </div>
-                
+
                 <button
                   type="submit"
                   disabled={isSubmitting}

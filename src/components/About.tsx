@@ -5,12 +5,11 @@ import { useInView } from "react-intersection-observer";
 const skills = [
   "UI/UX Design",
   "React.js",
-  "TypeScript",
+  "React.ts",
+  "JavaScript",
   "Tailwind CSS",
-  "Node.js",
   "Figma",
   "Responsive Design",
-  "Next.js",
 ];
 
 const About = () => {
@@ -21,7 +20,7 @@ const About = () => {
 
   return (
     <section id="about" className="py-20 md:py-28 bg-secondary/50">
-      <div 
+      <div
         ref={sectionRef}
         className="section-container"
       >
@@ -53,13 +52,13 @@ const About = () => {
                     </svg>
                   </div>
                 </div>
-                
+
                 <div className="absolute -top-4 -right-4 w-24 h-24 bg-primary/10 rounded-full blur-2xl"></div>
                 <div className="absolute -bottom-4 -left-4 w-32 h-32 bg-primary/10 rounded-full blur-2xl"></div>
               </div>
             </div>
           </div>
-          
+
           <div className="flex-1 order-1 lg:order-2">
             <div className={cn(
               "space-y-6 transition-all duration-700",
@@ -70,27 +69,27 @@ const About = () => {
                   About Me
                 </div>
                 <h2 className="section-title">
-                  Crafting digital experiences with precision
+                  Designing Seamless Digital Experiences
                 </h2>
                 <p className="text-muted-foreground text-lg max-w-lg">
-                  I'm a designer and developer passionate about creating intuitive and engaging digital products that solve real-world problems.
+                  I'm Astha, a passionate UI/UX designer and web developer, dedicated to crafting intuitive and visually engaging digital products.
                 </p>
               </div>
-              
+
               <div className="space-y-4">
                 <p className="text-foreground">
-                  With over 5 years of experience in the field, I specialize in creating user-centered designs and bringing them to life with clean, efficient code. My approach blends aesthetic beauty with functional simplicity, resulting in products that are both visually appealing and easy to use.
+                  As a self-taught designer and an Informatics Engineering student from Purwokerto, I specialize in creating user-friendly interfaces and turning concepts into functional, aesthetic web experiences. My work focuses on blending design and technology to deliver seamless, meaningful interactions.
                 </p>
                 <p className="text-foreground">
-                  I believe in the power of collaboration and continuous learning, always seeking to expand my knowledge and skills to deliver the best possible solutions.
+                  I thrive on continuous learning and innovation, always exploring new tools and techniques to enhance usability and efficiency in digital design.
                 </p>
               </div>
-              
+
               <div className="pt-4">
                 <h3 className="text-lg font-semibold mb-3">My Skills</h3>
                 <div className="flex flex-wrap gap-2">
                   {skills.map((skill) => (
-                    <span 
+                    <span
                       key={skill}
                       className="bg-background px-4 py-1.5 rounded-full text-sm border border-border"
                     >

@@ -51,23 +51,18 @@ const Footer = () => {
               <h3 className="font-medium mb-3">Connect</h3>
               <ul className="space-y-2">
                 <li>
-                  <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-foreground transition-colors">
+                  <a href="https://github.com/Astha4Study" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-foreground transition-colors">
                     GitHub
                   </a>
                 </li>
                 <li>
-                  <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-foreground transition-colors">
-                    LinkedIn
+                  <a href="https://www.instagram.com/rheiyn._/?hl=id" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-foreground transition-colors">
+                    Instagram
                   </a>
                 </li>
                 <li>
-                  <a href="https://dribbble.com" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-foreground transition-colors">
-                    Dribbble
-                  </a>
-                </li>
-                <li>
-                  <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-foreground transition-colors">
-                    Twitter
+                  <a href="https://web.facebook.com/heiyand.id?_rdc=1&_rdr#" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-foreground transition-colors">
+                    Facebook
                   </a>
                 </li>
               </ul>
@@ -79,7 +74,7 @@ const Footer = () => {
           <p className="text-muted-foreground text-sm">
             © {currentYear} Astha. All rights reserved.
           </p>
-          <div className="mt-4 md:mt-0 flex items-center gap-4">
+          {/* <div className="mt-4 md:mt-0 flex items-center gap-4">
             <a href="#" className="text-muted-foreground hover:text-foreground text-sm transition-colors">
               Privacy Policy
             </a>
@@ -87,7 +82,7 @@ const Footer = () => {
             <a href="#" className="text-muted-foreground hover:text-foreground text-sm transition-colors">
               Terms of Service
             </a>
-          </div>
+          </div> */}
         </div>
       </div>
     </footer>

@@ -6,30 +6,30 @@ import { useInView } from "react-intersection-observer";
 const projects = [
   {
     id: 1,
-    title: "Modern E-commerce Platform",
-    description: "A full-featured online shopping experience with seamless checkout flow and real-time inventory management.",
-    tags: ["React", "Node.js", "MongoDB", "Stripe"],
+    title: "Optimizing PAMSIMAS Management with Airin",
+    description: "Airin is a system designed to assist Bumdes in managing the utilization of PAMSIMAS services.",
+    tags: ["Laravel", "Bootstrap", "Tailwind CSS", "MySQL", "PHP"],
     image: "/placeholder.svg",
   },
   {
     id: 2,
-    title: "Finance Dashboard App",
-    description: "An intuitive dashboard for tracking personal finances, investments, and spending patterns with data visualization.",
-    tags: ["TypeScript", "Next.js", "Tailwind CSS", "Chart.js"],
+    title: "LMS Intermedia",
+    description: "A modern Learning Management System designed to facilitate online courses, student progress tracking, and interactive learning experiences.",
+    tags: ["Laravel", "Filament", "MySQL", "PHP"],
     image: "/placeholder.svg",
   },
   {
     id: 3,
-    title: "Fitness Tracking Application",
+    title: "Weather Forecast",
     description: "A mobile-first web app for tracking workouts, nutrition, and personal fitness goals with progress visualization.",
-    tags: ["React Native", "Firebase", "Redux", "Styled Components"],
+    tags: ["HTML", "CSS", "JavaScript", "API"],
     image: "/placeholder.svg",
   },
 ];
 
 const Projects = () => {
   const [activeProject, setActiveProject] = useState<number | null>(null);
-  
+
   const { ref: sectionRef, inView } = useInView({
     triggerOnce: true,
     threshold: 0.1,
@@ -37,7 +37,7 @@ const Projects = () => {
 
   return (
     <section id="projects" className="py-20 md:py-28">
-      <div 
+      <div
         ref={sectionRef}
         className="section-container"
       >
@@ -46,16 +46,16 @@ const Projects = () => {
           inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
         )}>
           <div className="bg-primary/10 text-primary font-medium px-4 py-1.5 rounded-full inline-block text-sm mb-4">
-            My Work
+            My Projects
           </div>
           <h2 className="section-title">
-            Featured Projects
+            Featured Work
           </h2>
           <p className="section-subtitle">
-            A selection of my recent work, showcasing my skills in design, development, and problem-solving.
+            A curated selection of my latest projects, highlighting my expertise in design, development, and innovative problem-solving.
           </p>
         </div>
-        
+
         <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
           {projects.map((project, index) => (
             <div
@@ -74,15 +74,15 @@ const Projects = () => {
             >
               <div className="aspect-[4/3] w-full bg-muted overflow-hidden">
                 <div className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105">
-                  <img 
-                    src={project.image} 
-                    alt={project.title} 
-                    className="h-full w-full object-cover" 
+                  <img
+                    src={project.image}
+                    alt={project.title}
+                    className="h-full w-full object-cover"
                     loading="lazy"
                   />
                 </div>
               </div>
-              
+
               <div className="p-6">
                 <h3 className="text-xl font-semibold mb-2 transition-colors duration-300 group-hover:text-primary">
                   {project.title}
@@ -92,7 +92,7 @@ const Projects = () => {
                 </p>
                 <div className="flex flex-wrap gap-2 mb-4">
                   {project.tags.map((tag) => (
-                    <span 
+                    <span
                       key={tag}
                       className="bg-secondary px-3 py-1 rounded-full text-xs font-medium"
                     >
@@ -101,8 +101,8 @@ const Projects = () => {
                   ))}
                 </div>
                 <div>
-                  <a 
-                    href="#" 
+                  <a
+                    href="#"
                     className="inline-flex items-center text-primary font-medium text-sm hover:underline"
                   >
                     View Project
@@ -127,13 +127,13 @@ const Projects = () => {
             </div>
           ))}
         </div>
-        
+
         <div className={cn(
           "text-center mt-12 transition-all duration-700 delay-500",
           inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
         )}>
-          <a 
-            href="#" 
+          <a
+            href="#"
             className="inline-flex items-center justify-center rounded-md border border-input bg-background px-6 py-3 text-sm font-medium shadow-sm transition-colors hover:bg-accent hover:text-accent-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring"
           >
             View All Projects
