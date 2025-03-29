@@ -20,9 +20,9 @@ const projects = [
   },
   {
     id: 3,
-    title: "Weather Forecast",
-    description: "A mobile-first web app for tracking workouts, nutrition, and personal fitness goals with progress visualization.",
-    tags: ["HTML", "CSS", "JavaScript", "API"],
+    title: "Portfolio Website",
+    description: "A personal portfolio website showcasing my projects, skills, and experiences.",
+    tags: ["Vite", "React", "TypeScript", "Tailwind CSS", "ShadnCn-ui"],
     image: "/placeholder.svg",
   },
 ];

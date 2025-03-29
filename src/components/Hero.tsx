@@ -1,5 +1,6 @@
 
 import { cn } from "@/lib/utils";
+import HeroImg from "@/images/img/Iyan.jpg";
 
 const Hero = () => {
   return (
@@ -50,38 +51,24 @@ const Hero = () => {
                     <line x1="17.5" y1="6.5" x2="17.5" y2="6.5" stroke="currentColor" strokeWidth="2" />
                   </svg>
                 </a>
-                <a href="https://web.facebook.com/heiyand.id?_rdc=1&_rdr#" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="text-muted-foreground hover:text-primary transition-colors">
+                <a href="https://t.me/iyandabes" target="_blank" rel="noopener noreferrer" aria-label="Telegram" className="text-muted-foreground hover:text-primary transition-colors">
                   <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                    <path d="M22 12a10 10 0 1 0-11.5 9.9V15H7v-3h3v-2.3c0-3 1.8-4.7 4.5-4.7 1.3 0 2.6.2 2.6.2v3h-1.5c-1.5 0-2 .9-2 1.9V12h3.5l-.5 3h-3v6.9A10 10 0 0 0 22 12z" />
-                    <line x1="17.5" y1="6.5" x2="17.5" y2="6.5" stroke="currentColor" strokeWidth="2" />
+                    <path d="M21 3 3 10.5l6.5 2.5L18 6 9.5 14l-.5 6 3.5-3 4 3 6-16z" />
                   </svg>
                 </a>
+
               </div>
             </div>
           </div>
 
           <div className="flex-1 w-full max-w-md mx-auto lg:mx-0">
             <div className="relative">
-              <div className="opacity-0 animate-fade-in border-gradient glass overflow-hidden aspect-square w-full rounded-lg shadow-xl">
-                <div className="absolute inset-0 opacity-30 bg-gradient-to-br from-primary/20 to-white"></div>
-                <div className="h-full w-full object-cover">
-                  <svg
-                    className="w-full h-full text-muted opacity-20"
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="1"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  >
-                    <rect width="18" height="18" x="3" y="3" rx="2" ry="2" />
-                    <circle cx="9" cy="9" r="2" />
-                    <path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21" />
-                  </svg>
-                </div>
+              <div className="opacity-90 animate-fade-in border-gradient glass overflow-hidden aspect-square w-full rounded-lg shadow-xl">
+                <img
+                  src={HeroImg}
+                  alt=""
+                  className="h-full w-full object-cover"
+                />
               </div>
 
               <div className="absolute -top-4 -right-4 w-24 h-24 bg-primary/10 rounded-full blur-2xl"></div>

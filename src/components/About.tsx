@@ -1,6 +1,6 @@
-
 import { cn } from "@/lib/utils";
 import { useInView } from "react-intersection-observer";
+import AboutImg from "@/images/img/IyanSita.jpg";
 
 const skills = [
   "UI/UX Design",
@@ -10,6 +10,9 @@ const skills = [
   "Tailwind CSS",
   "Figma",
   "Responsive Design",
+  "Bootstrap",
+  "Vibe Coding"
+
 ];
 
 const About = () => {
@@ -32,24 +35,12 @@ const About = () => {
                 inView ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-8"
               )}>
                 <div className="border-gradient glass overflow-hidden aspect-[4/5] w-full rounded-lg shadow-xl">
-                  <div className="absolute inset-0 opacity-30 bg-gradient-to-br from-primary/20 to-white"></div>
+                  <div className="absolute inset-0 opacity-20 bg-gradient-to-br from-primary/20 to-white"></div>
                   <div className="h-full w-full object-cover">
-                    <svg
-                      className="w-full h-full text-muted opacity-20"
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="24"
-                      height="24"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      strokeWidth="1"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    >
-                      <rect width="18" height="18" x="3" y="3" rx="2" ry="2" />
-                      <circle cx="9" cy="9" r="2" />
-                      <path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21" />
-                    </svg>
+                    <img
+                      src={AboutImg}
+                      alt=""
+                    />
                   </div>
                 </div>
 
