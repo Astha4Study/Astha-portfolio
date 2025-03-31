@@ -1,15 +1,16 @@
-
 import { useState } from "react";
 import { cn } from "@/lib/utils";
 import { useInView } from "react-intersection-observer";
+import { Alert, AlertTitle, AlertDescription } from "@/components/ui/alert";
 
 const projects = [
   {
     id: 1,
-    title: "Optimizing PAMSIMAS Management with Airin",
+    title: "Airin",
     description: "Airin is a system designed to assist Bumdes in managing the utilization of PAMSIMAS services.",
     tags: ["Laravel", "Bootstrap", "Tailwind CSS", "MySQL", "PHP"],
     image: "src/images/projectImages/ProjectAirin.png",
+
   },
   {
     id: 2,
@@ -22,37 +23,63 @@ const projects = [
     id: 3,
     title: "Portfolio Website",
     description: "A personal portfolio website showcasing my projects, skills, and experiences.",
-    tags: ["Vite", "React", "TypeScript", "Tailwind CSS", "ShadnCn-ui"],
-    image: "/placeholder.svg",
+    tags: ["Vite", "React", "TypeScript", "Tailwind CSS"],
+    image: "src/images/projectImages/ProjectPortfolio.png",
   },
 ];
 
 const Projects = () => {
   const [activeProject, setActiveProject] = useState<number | null>(null);
+  const [showAlert, setShowAlert] = useState(false);
+  const [fadeOut, setFadeOut] = useState(false);
 
   const { ref: sectionRef, inView } = useInView({
     triggerOnce: true,
     threshold: 0.1,
   });
 
+  const handleShowAlert = () => {
+    setShowAlert(true);
+    setFadeOut(false);
+
+    setTimeout(() => setFadeOut(true), 2500);
+    setTimeout(() => setShowAlert(false), 3000);
+  };
+
   return (
-    <section id="projects" className="py-20 md:py-28">
-      <div
-        ref={sectionRef}
-        className="section-container"
-      >
-        <div className={cn(
-          "text-center max-w-2xl mx-auto mb-16 transition-all duration-700",
-          inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
-        )}>
+    <section id="projects" className="py-10 md:py-18">
+
+      {/* Alert at the top */}
+      {showAlert && (
+        <div
+          className={cn(
+            "fixed top-0 left-0 w-full flex justify-center z-50",
+            fadeOut ? "animate-slide-up" : "animate-slide-down"
+          )}
+        >
+          <Alert className="w-11/12 max-w-md mt-4" variant="default">
+            <AlertTitle>Coming Soon!</AlertTitle>
+            <AlertDescription>
+              More projects will be added soon. Stay tuned!
+            </AlertDescription>
+          </Alert>
+        </div>
+      )}
+
+      <div ref={sectionRef} className="section-container">
+        <div
+          className={cn(
+            "text-center max-w-2xl mx-auto mb-16 transition-all duration-700",
+            inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+          )}
+        >
           <div className="bg-primary/10 text-primary font-medium px-4 py-1.5 rounded-full inline-block text-sm mb-4">
             My Projects
           </div>
-          <h2 className="section-title">
-            Featured Work
-          </h2>
+          <h2 className="section-title">Featured Work</h2>
           <p className="section-subtitle">
-            A curated selection of my latest projects, highlighting my expertise in design, development, and innovative problem-solving.
+            A curated selection of my latest projects, highlighting my expertise
+            in design, development, and innovative problem-solving.
           </p>
         </div>
 
@@ -128,15 +155,17 @@ const Projects = () => {
           ))}
         </div>
 
-        <div className={cn(
-          "text-center mt-12 transition-all duration-700 delay-500",
-          inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
-        )}>
+        <div
+          className={cn(
+            "text-center mt-12 transition-all duration-700 delay-500",
+            inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+          )}
+        >
           <a
-            href="#"
-            className="inline-flex items-center justify-center rounded-md border border-input bg-background px-6 py-3 text-sm font-medium shadow-sm transition-colors hover:bg-accent hover:text-accent-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring"
+            onClick={handleShowAlert}
+            className="inline-flex items-center justify-center border rounded-md border-input bg-background px-6 py-3 text-sm font-medium shadow-sm transition-colors hover:bg-accent hover:text-accent-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring cursor-pointer"
           >
-            View All Projects
+            More Projects
           </a>
         </div>
       </div>

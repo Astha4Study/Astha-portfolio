@@ -22,7 +22,7 @@ const About = () => {
   });
 
   return (
-    <section id="about" className="py-20 md:py-28 bg-secondary/50">
+    <section id="about" className="py-10 md:py-18 bg-secondary/50">
       <div
         ref={sectionRef}
         className="section-container"

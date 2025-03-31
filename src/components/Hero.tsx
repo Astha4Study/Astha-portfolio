@@ -4,7 +4,7 @@ import HeroImg from "@/images/img/Iyan.jpg";
 
 const Hero = () => {
   return (
-    <section id="home" className="min-h-screen pt-28 pb-20 flex items-center">
+    <section id="home" className="min-h-screen flex items-center">
       <div className="section-container">
         <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
           <div className="flex-1 space-y-8">
@@ -16,7 +16,7 @@ const Hero = () => {
                 Hello, I'm <span className="text-primary">Astha</span>
               </h1>
               <p className="opacity-0 animate-fade-in-delay-3 text-muted-foreground text-lg md:text-xl lg:text-2xl max-w-xl mt-4">
-                I craft seamless and user-friendly digital experiences.
+                Aspiring Frontend Developer & UI/UX Designer, passionate about crafting intuitive and visually engaging digital experiences.
               </p>
             </div>
 
