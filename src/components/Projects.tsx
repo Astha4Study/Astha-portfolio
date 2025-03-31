@@ -9,14 +9,14 @@ const projects = [
     title: "Optimizing PAMSIMAS Management with Airin",
     description: "Airin is a system designed to assist Bumdes in managing the utilization of PAMSIMAS services.",
     tags: ["Laravel", "Bootstrap", "Tailwind CSS", "MySQL", "PHP"],
-    image: "/placeholder.svg",
+    image: "src/images/projectImages/ProjectAirin.png",
   },
   {
     id: 2,
     title: "LMS Intermedia",
     description: "A modern Learning Management System designed to facilitate online courses, student progress tracking, and interactive learning experiences.",
     tags: ["Laravel", "Filament", "MySQL", "PHP"],
-    image: "/placeholder.svg",
+    image: "src/images/projectImages/ProjectLms.png",
   },
   {
     id: 3,
