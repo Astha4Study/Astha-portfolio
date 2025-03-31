@@ -2,6 +2,7 @@ import { useState } from "react";
 import { cn } from "@/lib/utils";
 import { useInView } from "react-intersection-observer";
 import { Alert, AlertTitle, AlertDescription } from "@/components/ui/alert";
+import { link } from "fs";
 
 const projects = [
   {
@@ -10,7 +11,7 @@ const projects = [
     description: "Airin is a system designed to assist Bumdes in managing the utilization of PAMSIMAS services.",
     tags: ["Laravel", "Bootstrap", "Tailwind CSS", "MySQL", "PHP"],
     image: "src/images/projectImages/ProjectAirin.png",
-
+    link: "https://airin.projekbawor.com/",
   },
   {
     id: 2,
@@ -18,6 +19,7 @@ const projects = [
     description: "A modern Learning Management System designed to facilitate online courses, student progress tracking, and interactive learning experiences.",
     tags: ["Laravel", "Filament", "MySQL", "PHP"],
     image: "src/images/projectImages/ProjectLms.png",
+    link: "https://lms.intermediaamikom.org",
   },
   {
     id: 3,
@@ -25,6 +27,7 @@ const projects = [
     description: "A personal portfolio website showcasing my projects, skills, and experiences.",
     tags: ["Vite", "React", "TypeScript", "Tailwind CSS"],
     image: "src/images/projectImages/ProjectPortfolio.png",
+    link: "",
   },
 ];
 
@@ -78,8 +81,7 @@ const Projects = () => {
           </div>
           <h2 className="section-title">Featured Work</h2>
           <p className="section-subtitle">
-            A curated selection of my latest projects, highlighting my expertise
-            in design, development, and innovative problem-solving.
+            A showcase of my latest projects, reflecting my journey in frontend development, backend development, And UI/UX design.
           </p>
         </div>
 
@@ -129,8 +131,9 @@ const Projects = () => {
                 </div>
                 <div>
                   <a
-                    href="#"
+                    href={project.link}
                     className="inline-flex items-center text-primary font-medium text-sm hover:underline"
+                    target="_blank"
                   >
                     View Project
                     <svg
