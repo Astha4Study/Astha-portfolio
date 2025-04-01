@@ -1,3 +1,4 @@
+
 import { useState, useEffect } from "react";
 import { cn } from "@/lib/utils";
 import { Link } from "react-router-dom";
@@ -18,6 +19,19 @@ const Navbar = () => {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  useEffect(() => {
+    // Prevent scrolling when mobile menu is open
+    if (isMobileMenuOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
+    }
+
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [isMobileMenuOpen]);
 
   const navLinks = [
     { name: "Home", href: "#home" },
@@ -78,25 +92,22 @@ const Navbar = () => {
       </div>
 
       {/* Mobile Navigation */}
-      <div
-        className={cn(
-          "fixed inset-0 z-30 bg-white flex flex-col items-center justify-center transition-transform duration-300 ease-in-out transform md:hidden",
-          isMobileMenuOpen ? "translate-y-0" : "-translate-y-full"
-        )}
-      >
-        <nav className="flex flex-col items-center space-y-6">
-          {navLinks.map((link) => (
-            <a
-              key={link.name}
-              href={link.href}
-              className="nav-link text-lg font-medium"
-              onClick={() => setIsMobileMenuOpen(false)}
-            >
-              {link.name}
-            </a>
-          ))}
-        </nav>
-      </div>
+      {isMobileMenuOpen && (
+        <div className="fixed inset-0 z-30 bg-white flex flex-col items-center justify-center md:hidden">
+          <nav className="flex flex-col items-center space-y-6">
+            {navLinks.map((link) => (
+              <a
+                key={link.name}
+                href={link.href}
+                className="nav-link text-lg font-medium"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                {link.name}
+              </a>
+            ))}
+          </nav>
+        </div>
+      )}
     </header>
   );
 };
