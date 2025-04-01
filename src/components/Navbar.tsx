@@ -73,7 +73,7 @@ const Navbar = () => {
         {/* Mobile Menu Button */}
         <button
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-          className="md:hidden flex flex-col space-y-1.5 p-2"
+          className="md:hidden flex flex-col space-y-1.5 p-2 z-50"
           aria-label="Toggle menu"
         >
           <span className={cn(
@@ -91,10 +91,15 @@ const Navbar = () => {
         </button>
       </div>
 
-      {/* Mobile Navigation */}
-      {isMobileMenuOpen && (
-        <div className="fixed inset-0 z-30 bg-white flex flex-col items-center justify-center md:hidden">
-          <nav className="flex flex-col items-center space-y-6">
+      {/* Mobile Navigation - Slide from right */}
+      <div 
+        className={cn(
+          "fixed top-0 right-0 h-full w-3/4 max-w-xs bg-white shadow-lg z-40 transform transition-transform duration-300 ease-in-out md:hidden",
+          isMobileMenuOpen ? "translate-x-0" : "translate-x-full"
+        )}
+      >
+        <div className="h-full flex flex-col pt-20 px-6">
+          <nav className="flex flex-col items-start space-y-6">
             {navLinks.map((link) => (
               <a
                 key={link.name}
@@ -107,6 +112,14 @@ const Navbar = () => {
             ))}
           </nav>
         </div>
+      </div>
+
+      {/* Overlay for closing the menu */}
+      {isMobileMenuOpen && (
+        <div 
+          className="fixed inset-0 bg-black/20 z-30 md:hidden"
+          onClick={() => setIsMobileMenuOpen(false)}
+        />
       )}
     </header>
   );
