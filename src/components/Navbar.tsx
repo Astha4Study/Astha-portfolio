@@ -8,20 +8,10 @@ const Navbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   useEffect(() => {
-    const handleScroll = () => {
-      if (window.scrollY > 10) {
-        setIsScrolled(true);
-      } else {
-        setIsScrolled(false);
-      }
-    };
-
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
+    setIsScrolled(false);
   }, []);
 
   useEffect(() => {
-    // Prevent scrolling when mobile menu is open
     if (isMobileMenuOpen) {
       document.body.style.overflow = "hidden";
     } else {
@@ -91,7 +81,7 @@ const Navbar = () => {
         </button>
       </div>
 
-      {/* Mobile Navigation - Slide from right */}
+      {/* Mobile Navigation */}
       <div 
         className={cn(
           "fixed top-0 right-0 h-full w-3/4 max-w-xs bg-white shadow-lg z-40 transform transition-transform duration-300 ease-in-out md:hidden",

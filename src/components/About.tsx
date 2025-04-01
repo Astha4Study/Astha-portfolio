@@ -10,9 +10,7 @@ const skills = [
   "Tailwind CSS",
   "Figma",
   "Responsive Design",
-  "Bootstrap",
   "Vibe Coding"
-
 ];
 
 const About = () => {

@@ -1,4 +1,3 @@
-
 import { Link } from "react-router-dom";
 
 const Footer = () => {
@@ -7,8 +6,8 @@ const Footer = () => {
   return (
     <footer className="py-12 md:py-16 bg-background border-t border-border">
       <div className="max-w-7xl mx-auto px-6 md:px-12">
-        <div className="flex flex-col md:flex-row justify-between items-center">
-          <div className="mb-8 md:mb-0">
+        <div className="flex flex-col md:flex-row justify-between items-start md:items-center">
+          <div className="mb-8 md:mb-0"> {/* Rata kiri di mobile, tengah di desktop */}
             <Link
               to="/"
               className="font-display text-xl font-semibold tracking-tight"
@@ -20,8 +19,8 @@ const Footer = () => {
             </p>
           </div>
 
-          <div className="flex flex-col md:flex-row gap-8 md:gap-16">
-            <div>
+          <div className="flex flex-row gap-8 sm:gap-14 md:gap-16">
+            <div className="text-left">
               <h3 className="font-medium mb-3">Explore</h3>
               <ul className="space-y-2">
                 <li>
@@ -39,15 +38,10 @@ const Footer = () => {
                     Projects
                   </a>
                 </li>
-                {/* <li>
-                  <a href="#contact" className="text-muted-foreground hover:text-foreground transition-colors">
-                    Contact
-                  </a>
-                </li> */}
               </ul>
             </div>
 
-            <div>
+            <div className="text-left">
               <h3 className="font-medium mb-3">Connect</h3>
               <ul className="space-y-2">
                 <li>
@@ -70,19 +64,10 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="border-t border-border mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
+        <div className="border-t border-border mt-12 pt-8 flex flex-col md:flex-row justify-center items-start md:items-center">
           <p className="text-muted-foreground text-sm">
             © {currentYear} Astha. All rights reserved.
           </p>
-          {/* <div className="mt-4 md:mt-0 flex items-center gap-4">
-            <a href="#" className="text-muted-foreground hover:text-foreground text-sm transition-colors">
-              Privacy Policy
-            </a>
-            <span className="text-muted-foreground">•</span>
-            <a href="#" className="text-muted-foreground hover:text-foreground text-sm transition-colors">
-              Terms of Service
-            </a>
-          </div> */}
         </div>
       </div>
     </footer>
