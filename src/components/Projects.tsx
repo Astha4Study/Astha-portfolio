@@ -1,8 +1,8 @@
 import { useState } from "react";
 import { cn } from "@/lib/utils";
 import { useInView } from "react-intersection-observer";
-import { Alert, AlertTitle, AlertDescription } from "@/components/ui/alert";
-import { link } from "fs";
+import { useToast } from "@/hooks/use-toast";
+import { toast } from "sonner";
 
 const projects = [
   {
@@ -33,42 +33,22 @@ const projects = [
 
 const Projects = () => {
   const [activeProject, setActiveProject] = useState<number | null>(null);
-  const [showAlert, setShowAlert] = useState(false);
-  const [fadeOut, setFadeOut] = useState(false);
+  const { toast } = useToast();
 
   const { ref: sectionRef, inView } = useInView({
     triggerOnce: true,
     threshold: 0.1,
   });
 
-  const handleShowAlert = () => {
-    setShowAlert(true);
-    setFadeOut(false);
-
-    setTimeout(() => setFadeOut(true), 2500);
-    setTimeout(() => setShowAlert(false), 3000);
+  const handleShowMoreProject = () => {
+    toast({
+      title: "Coming Soon",
+      description: "More projects will be added soon!",
+    });
   };
 
   return (
     <section id="projects" className="py-10 md:py-18">
-
-      {/* Alert at the top */}
-      {showAlert && (
-        <div
-          className={cn(
-            "fixed top-0 left-0 w-full flex justify-center z-50",
-            fadeOut ? "animate-slide-up" : "animate-slide-down"
-          )}
-        >
-          <Alert className="w-11/12 max-w-md mt-4" variant="default">
-            <AlertTitle>Coming Soon!</AlertTitle>
-            <AlertDescription>
-              More projects will be added soon. Stay tuned!
-            </AlertDescription>
-          </Alert>
-        </div>
-      )}
-
       <div ref={sectionRef} className="section-container">
         <div
           className={cn(
@@ -165,7 +145,7 @@ const Projects = () => {
           )}
         >
           <a
-            onClick={handleShowAlert}
+            onClick={handleShowMoreProject}
             className="inline-flex items-center justify-center border rounded-md border-input bg-background px-6 py-3 text-sm font-medium shadow-sm transition-colors hover:bg-accent hover:text-accent-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring cursor-pointer"
           >
             More Projects

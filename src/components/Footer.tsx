@@ -3,23 +3,23 @@ import { Link } from "react-router-dom";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
-  
+
   return (
     <footer className="py-12 md:py-16 bg-background border-t border-border">
       <div className="max-w-7xl mx-auto px-6 md:px-12">
         <div className="flex flex-col md:flex-row justify-between items-center">
           <div className="mb-8 md:mb-0">
-            <Link 
-              to="/" 
+            <Link
+              to="/"
               className="font-display text-xl font-semibold tracking-tight"
             >
               Astha<span className="text-primary">.</span>
             </Link>
             <p className="text-muted-foreground mt-2 max-w-xs">
-              Creating elegant digital experiences with a focus on simplicity and user experience.
+              Exploring UI/UX and frontend development to create simple, elegant, and user-focused digital experiences.
             </p>
           </div>
-          
+
           <div className="flex flex-col md:flex-row gap-8 md:gap-16">
             <div>
               <h3 className="font-medium mb-3">Explore</h3>
@@ -39,14 +39,14 @@ const Footer = () => {
                     Projects
                   </a>
                 </li>
-                <li>
+                {/* <li>
                   <a href="#contact" className="text-muted-foreground hover:text-foreground transition-colors">
                     Contact
                   </a>
-                </li>
+                </li> */}
               </ul>
             </div>
-            
+
             <div>
               <h3 className="font-medium mb-3">Connect</h3>
               <ul className="space-y-2">
@@ -69,7 +69,7 @@ const Footer = () => {
             </div>
           </div>
         </div>
-        
+
         <div className="border-t border-border mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
           <p className="text-muted-foreground text-sm">
             © {currentYear} Astha. All rights reserved.

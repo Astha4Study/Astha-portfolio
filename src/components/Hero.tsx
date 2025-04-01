@@ -28,7 +28,7 @@ const Hero = () => {
                 View Projects
               </a>
               <a
-                href="#contact"
+                href="mailto:iyandabes1@gmail.com"
                 className="inline-flex items-center justify-center rounded-md border border-input bg-background px-6 py-3 text-sm font-medium shadow-sm transition-colors hover:bg-accent hover:text-accent-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring"
               >
                 Contact Me
