@@ -4,13 +4,18 @@ import { useInView } from "react-intersection-observer";
 import { useToast } from "@/hooks/use-toast";
 import { toast } from "sonner";
 
+// Image
+import ProjectAirin from "@/images/projectImages/ProjectAirin.png";
+import ProjectLms from "@/images/projectImages/ProjectLms.png";
+import ProjectPortfolio from "@/images/projectImages/ProjectPortfolio.png";
+
 const projects = [
   {
     id: 1,
     title: "Airin",
     description: "Airin is a system designed to assist Bumdes in managing the utilization of PAMSIMAS services.",
     tags: ["Laravel", "Bootstrap", "Tailwind CSS", "MySQL", "PHP"],
-    image: "src/images/projectImages/ProjectAirin.png",
+    image: ProjectAirin,
     link: "https://airin.projekbawor.com/",
   },
   {
@@ -18,7 +23,7 @@ const projects = [
     title: "LMS Intermedia",
     description: "A modern Learning Management System designed to facilitate online courses, student progress tracking, and interactive learning experiences.",
     tags: ["Laravel", "Filament", "MySQL", "PHP"],
-    image: "src/images/projectImages/ProjectLms.png",
+    image: ProjectLms,
     link: "https://lms.intermediaamikom.org",
   },
   {
@@ -26,7 +31,7 @@ const projects = [
     title: "Portfolio Website",
     description: "A personal portfolio website showcasing my projects, skills, and experiences.",
     tags: ["Vite", "React", "TypeScript", "Tailwind CSS"],
-    image: "src/images/projectImages/ProjectPortfolio.png",
+    image: ProjectPortfolio,
     link: "",
   },
 ];
