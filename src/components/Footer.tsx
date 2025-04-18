@@ -7,7 +7,7 @@ const Footer = () => {
     <footer className="py-12 md:py-16 bg-background border-t border-border">
       <div className="max-w-7xl mx-auto px-6 md:px-12">
         <div className="flex flex-col md:flex-row justify-between items-start md:items-center">
-          <div className="mb-8 md:mb-0"> {/* Rata kiri di mobile, tengah di desktop */}
+          <div className="mb-8 md:mb-0">
             <Link
               to="/"
               className="font-display text-xl font-semibold tracking-tight"
