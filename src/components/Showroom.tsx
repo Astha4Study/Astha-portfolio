@@ -28,7 +28,7 @@ const Showroom = () => {
       description:
         "Airin is a system designed to assist Bumdes in managing the utilization of PAMSIMAS services.",
       tags: ["Laravel", "Bootstrap", "Tailwind CSS", "MySQL", "PHP"],
-      image: "/project/ProjectAirin.png",
+      image: "/public/project/ProjectAirin.png",
       link: "https://airin.projekbawor.com/",
     },
     {
@@ -37,7 +37,7 @@ const Showroom = () => {
       description:
         "A modern Learning Management System designed to facilitate online courses, student progress tracking, and interactive learning experiences.",
       tags: ["Laravel", "Filament", "MySQL", "PHP"],
-      image: "/project/ProjectLms.png",
+      image: "/public/project/ProjectLms.png",
       link: "https://lms.intermediaamikom.org",
     },
     {
@@ -46,7 +46,7 @@ const Showroom = () => {
       description:
         "A personal portfolio website showcasing my projects, skills, and experiences.",
       tags: ["Vite", "React", "TypeScript", "Tailwind CSS"],
-      image: "/project/ProjectPortfolio.png",
+      image: "/public/project/ProjectPortfolio.png",
       link: "",
     },
   ];
@@ -57,7 +57,7 @@ const Showroom = () => {
       title: "Juara 1 Karya Inovatif Web App",
       issuer: "Amikom Purwokerto",
       date: "December 2024",
-      image: "/certifications/TicWebApp.png",
+      image: "/public/certifications/TicWebApp.png",
       link: "",
     },
     {
@@ -65,7 +65,7 @@ const Showroom = () => {
       title: "Sertifikat Karya Inofatir Sistem Cerdas",
       issuer: "Amikom Purwokerto",
       date: "December 2024",
-      image: "/certifications/TicRobotika.png",
+      image: "/public/certifications/TicRobotika.png",
       link: "",
     },
   ];
