@@ -28,7 +28,7 @@ const Showroom = () => {
       description:
         "Airin is a system designed to assist Bumdes in managing the utilization of PAMSIMAS services.",
       tags: ["Laravel", "Bootstrap", "Tailwind CSS", "MySQL", "PHP"],
-      image: "/src/images/projectImages/ProjectAirin.png",
+      image: "/src/images/project/ProjectAirin.png",
       link: "https://airin.projekbawor.com/",
     },
     {
@@ -37,7 +37,7 @@ const Showroom = () => {
       description:
         "A modern Learning Management System designed to facilitate online courses, student progress tracking, and interactive learning experiences.",
       tags: ["Laravel", "Filament", "MySQL", "PHP"],
-      image: "/src/images/projectImages/ProjectLms.png",
+      image: "/src/images/project/ProjectLms.png",
       link: "https://lms.intermediaamikom.org",
     },
     {
@@ -46,7 +46,7 @@ const Showroom = () => {
       description:
         "A personal portfolio website showcasing my projects, skills, and experiences.",
       tags: ["Vite", "React", "TypeScript", "Tailwind CSS"],
-      image: "/src/images/projectImages/ProjectPortfolio.png",
+      image: "/src/images/project/ProjectPortfolio.png",
       link: "",
     },
   ];
@@ -54,27 +54,19 @@ const Showroom = () => {
   const certifications = [
     {
       id: 1,
-      title: "Frontend Web Developer Expert",
-      issuer: "Dicoding Indonesia",
-      date: "December 2023",
-      image: "/src/images/certifications/frontend-expert.jpg",
-      link: "https://www.dicoding.com/certificates/1OP8L6GGQPQK",
+      title: "Juara 1 Karya Inovatif Web App",
+      issuer: "Amikom Purwokerto",
+      date: "December 2024",
+      image: "/src/images/certifications/TicWebApp.png",
+      link: "",
     },
     {
       id: 2,
-      title: "Fundamental Web Development",
-      issuer: "Dicoding Indonesia", 
-      date: "September 2023",
-      image: "/src/images/certifications/web-fundamental.jpg",
-      link: "https://www.dicoding.com/certificates/KEXL4O3J4PG2",
-    },
-    {
-      id: 3,
-      title: "Belajar Dasar Pemrograman JavaScript",
-      issuer: "Dicoding Indonesia",
-      date: "July 2023",
-      image: "/src/images/certifications/javascript-basic.jpg",
-      link: "https://www.dicoding.com/certificates/JMZV9GORKZN9",
+      title: "Sertifikat Karya Inofatir Sistem Cerdas",
+      issuer: "Amikom Purwokerto",
+      date: "December 2024",
+      image: "/src/images/certifications/TicRobotika.png",
+      link: "",
     },
   ];
 

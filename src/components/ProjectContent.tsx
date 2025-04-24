@@ -1,6 +1,6 @@
 import { useState } from "react";
-import cn from "classnames"; // Pastikan library ini terinstal
-import { useInView } from "react-intersection-observer"; // Pastikan library ini terinstal
+import cn from "classnames";
+import { useInView } from "react-intersection-observer";
 import { useToast } from "@/hooks/use-toast";
 
 type Project = {
@@ -8,7 +8,7 @@ type Project = {
   title: string;
   description: string;
   tags: string[];
-  image: string;
+  image: any;
   link: string;
 };
 
