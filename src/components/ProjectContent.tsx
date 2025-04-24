@@ -1,3 +1,4 @@
+
 import { useState } from "react";
 import cn from "classnames";
 import { useInView } from "react-intersection-observer";
@@ -8,7 +9,7 @@ type Project = {
   title: string;
   description: string;
   tags: string[];
-  image: any;
+  image: string;
   link: string;
 };
 
