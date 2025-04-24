@@ -1,3 +1,4 @@
+
 import { useState } from "react";
 import { cn } from "@/lib/utils";
 import { useInView } from "react-intersection-observer";
@@ -16,7 +17,9 @@ const Showroom = () => {
     threshold: 0.1,
   });
 
-  const handleChangeTab = () => {};
+  const handleChangeTab = (tab: "projects" | "certifications") => {
+    setActiveTab(tab);
+  };
 
   const projects = [
     {
@@ -25,7 +28,7 @@ const Showroom = () => {
       description:
         "Airin is a system designed to assist Bumdes in managing the utilization of PAMSIMAS services.",
       tags: ["Laravel", "Bootstrap", "Tailwind CSS", "MySQL", "PHP"],
-      image: "src/images/projectImages/ProjectAirin.png",
+      image: "/src/images/projectImages/ProjectAirin.png",
       link: "https://airin.projekbawor.com/",
     },
     {
@@ -34,7 +37,7 @@ const Showroom = () => {
       description:
         "A modern Learning Management System designed to facilitate online courses, student progress tracking, and interactive learning experiences.",
       tags: ["Laravel", "Filament", "MySQL", "PHP"],
-      image: "src/images/projectImages/ProjectLms.png",
+      image: "/src/images/projectImages/ProjectLms.png",
       link: "https://lms.intermediaamikom.org",
     },
     {
@@ -43,7 +46,7 @@ const Showroom = () => {
       description:
         "A personal portfolio website showcasing my projects, skills, and experiences.",
       tags: ["Vite", "React", "TypeScript", "Tailwind CSS"],
-      image: "src/images/projectImages/ProjectPortfolio.png",
+      image: "/src/images/projectImages/ProjectPortfolio.png",
       link: "",
     },
   ];
@@ -51,15 +54,27 @@ const Showroom = () => {
   const certifications = [
     {
       id: 1,
-      title: "lore,m ipsum dolor sit amet",
+      title: "Frontend Web Developer Expert",
+      issuer: "Dicoding Indonesia",
+      date: "December 2023",
+      image: "/src/images/certifications/frontend-expert.jpg",
+      link: "https://www.dicoding.com/certificates/1OP8L6GGQPQK",
     },
     {
       id: 2,
-      title: "lore,m ipsum dolor sit amet",
+      title: "Fundamental Web Development",
+      issuer: "Dicoding Indonesia", 
+      date: "September 2023",
+      image: "/src/images/certifications/web-fundamental.jpg",
+      link: "https://www.dicoding.com/certificates/KEXL4O3J4PG2",
     },
     {
       id: 3,
-      title: "lore,m ipsum dolor sit amet",
+      title: "Belajar Dasar Pemrograman JavaScript",
+      issuer: "Dicoding Indonesia",
+      date: "July 2023",
+      image: "/src/images/certifications/javascript-basic.jpg",
+      link: "https://www.dicoding.com/certificates/JMZV9GORKZN9",
     },
   ];
 
@@ -89,17 +104,16 @@ const Showroom = () => {
 
         <div className="flex items-center justify-center pt-8">
           <div className="inline-flex overflow-hidden rounded-full bg-primary/5">
-            <a
-              onClick={() => setActiveTab("projects")}
+            <button
+              onClick={() => handleChangeTab("projects")}
               className={`px-4 py-2 text-primary hover:bg-primary/20 transition duration-200 ${
                 activeTab === "projects" ? "bg-primary/10 font-semibold" : ""
               }`}
             >
               Projects
-            </a>
-            <a
-              onClick={() => setActiveTab("certifications")}
-              href="#certification"
+            </button>
+            <button
+              onClick={() => handleChangeTab("certifications")}
               className={`px-4 py-2 text-primary hover:bg-primary/20 transition duration-200 ${
                 activeTab === "certifications"
                   ? "bg-primary/10 font-semibold"
@@ -107,7 +121,7 @@ const Showroom = () => {
               }`}
             >
               Certifications
-            </a>
+            </button>
           </div>
         </div>
       </div>
