@@ -62,7 +62,7 @@ const Showroom = () => {
     },
     {
       id: 2,
-      title: "Sertifikat Karya Inofatir Sistem Cerdas",
+      title: "Sertifikat Karya Inovatif Sistem Cerdas",
       issuer: "Amikom Purwokerto",
       date: "December 2024",
       image: "/public/certifications/TicRobotika.png",
