@@ -74,7 +74,7 @@ const Showroom = () => {
       issuer: "Proxocoris International",
       date: "March 2025",
       image: "certifications/SemifinalProxocoris.jpg",
-      link: ""
+      link: "https://proxo2025.vercel.app/"
     }
   ];
 
