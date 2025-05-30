@@ -68,6 +68,14 @@ const Showroom = () => {
       image: "certifications/TicRobotika.png",
       link: "",
     },
+    {
+      id: 3,
+      title: "Top 10 Finalist Web Development Competition",
+      issuer: "Proxocoris International",
+      date: "March 2025",
+      image: "certifications/SemifinalProxocoris.jpg",
+      link: ""
+    }
   ];
 
   return (
